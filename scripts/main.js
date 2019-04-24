@@ -77,8 +77,8 @@ function selectText(containerid) {
 		showCopied();
 	} else if (window.getSelection) {
 		var range = document.createRange();
-		range.selectNode(document.getElementById(containerid));
 		window.getSelection().removeAllRanges();
+		range.selectNode(document.getElementById(containerid));
 		window.getSelection().addRange(range);
 		document.execCommand('copy');
 		showCopied();
@@ -92,3 +92,27 @@ function clearSelection() {
 		document.selection.empty();
 	}
 }
+
+function escapeLineBreak(unsafe) {
+    return unsafe
+        .replace(/(\r\n|\n|\r)/gm, "");
+}
+
+document.addEventListener('copy', function(e){
+
+    // We need to prevent the default copy functionality,
+    // otherwise it would just copy the selection as usual.
+    e.preventDefault();
+
+    // The copy event doesn't give us access to the clipboard data,
+    // so we need to get the user selection via the Selection API.
+    var selection = window.getSelection().toString();
+
+    // Transform the selection in any way we want.
+    // In this example we will escape HTML code.
+    var escaped = escapeLineBreak(selection);
+
+    // Place the transformed text in the clipboard. 
+    e.clipboardData.setData('text/plain', escaped);
+
+});
