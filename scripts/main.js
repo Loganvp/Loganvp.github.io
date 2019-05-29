@@ -16,7 +16,7 @@ function randNum() {
 function executeLogan() {
 	var wordArrayLogan = [];
 	/* $.getJSON('https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minDictionaryCount=10&includePartOfSpeech=noun,verb,adjective&minCorpusCount=0&minLength=4&maxLength=6&limit=10&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) { */
-	$.getJSON('https://api.wordnik.com/v4/words.json/randomWords?minLength=4&maxLength=6&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) {
+	$.getJSON('http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=4&maxLength=6&limit=10&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) {
 		$.each(data, function (i, item) {
 			wordArrayLogan.push(item.word);
 		});
@@ -39,7 +39,7 @@ function executeLogan() {
 function executeAlex() {
 	var wordArrayAlex = [];
 	/* $.getJSON('https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minDictionaryCount=50&includePartOfSpeech=noun,verb,adjective&minCorpusCount=0&minLength=4&maxLength=4&limit=10&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) { */
-	$.getJSON('https://api.wordnik.com/v4/words.json/randomWords?minLength=3&maxLength=5&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) {
+	$.getJSON('http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=3&maxLength=5&limit=10&api_key=62dcd3414db907722420e014ca302c1c397302ac5e0682878', function (data) {
 		$.each(data, function (i, item) {
 			wordArrayAlex.push(item.word);
 		});
