@@ -9,8 +9,12 @@ function cap(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function randNum() {
+function randNum2() {
 	return Math.floor(Math.random() * (99 - 10) + 10);
+}
+
+function randNum3() {
+	return Math.floor(Math.random() * (999 - 100) + 100);
 }
 
 function randWordLogan() {
@@ -27,11 +31,11 @@ function executeLogan() {
 		$.each(data, function (i, item) {
 			wordArrayLogan.push(item.word);
 		});
-		var password_1 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum() + symbol()
-		var password_2 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum() + symbol()
-		var password_3 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum() + symbol()
-		var password_4 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum() + symbol()
-		var password_5 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum() + symbol()
+		var password_1 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum2() + symbol()
+		var password_2 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum2() + symbol()
+		var password_3 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum2() + symbol()
+		var password_4 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum2() + symbol()
+		var password_5 = wordArrayLogan[randWordLogan()].toLowerCase() + cap(wordArrayLogan[randWordLogan()]) + randNum2() + symbol()
 
 
 		$(".password1").html(password_1);
@@ -49,11 +53,11 @@ function executeAlex() {
 		$.each(data, function (i, item) {
 			wordArrayAlex.push(item.word);
 		});
-		var password_6 = cap(wordArrayAlex[randWordAlex()]) + cap(wordArrayAlex[randWordAlex()]) + randNum() + symbol()
-		var password_7 = cap(wordArrayAlex[randWordAlex()]) + cap(wordArrayAlex[randWordAlex()]) + randNum() + symbol()
-		var password_8 = cap(wordArrayAlex[randWordAlex()]) + cap(wordArrayAlex[randWordAlex()]) + randNum() + symbol()
-		var password_9 = cap(wordArrayAlex[randWordAlex()]) + cap(wordArrayAlex[randWordAlex()]) + randNum() + symbol()
-		var password_10 = cap(wordArrayAlex[randWordAlex()]) + cap(wordArrayAlex[randWordAlex()]) + randNum() + symbol()
+		var password_6 = cap(wordArrayAlex[randWordAlex()]) + randNum3() + symbol()
+		var password_7 = cap(wordArrayAlex[randWordAlex()]) + randNum3() + symbol()
+		var password_8 = cap(wordArrayAlex[randWordAlex()]) + randNum3() + symbol()
+		var password_9 = cap(wordArrayAlex[randWordAlex()]) + randNum3() + symbol()
+		var password_10 = cap(wordArrayAlex[randWordAlex()]) + randNum3() + symbol()
 
 
 		$(".password6").html(password_6);
