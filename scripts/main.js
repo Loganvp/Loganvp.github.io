@@ -23,7 +23,7 @@ function randWordAlex() {
 
 function executeLogan() {
 	var wordArrayLogan = [];
-	$.getJSON('logan.json', function (data) {
+	$.getJSON('sources\logan.json', function (data) {
 		$.each(data, function (i, item) {
 			wordArrayLogan.push(item.word);
 		});
@@ -45,7 +45,7 @@ function executeLogan() {
 
 function executeAlex() {
 	var wordArrayAlex = [];
-	.getJSON('alex.json', function (data) {
+	.getJSON('sources\alex.json', function (data) {
 		$.each(data, function (i, item) {
 			wordArrayAlex.push(item.word);
 		});
