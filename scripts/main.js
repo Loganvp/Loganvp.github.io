@@ -18,7 +18,7 @@ function randNum3() {
 }
 
 function randWordLogan() {
-	return Math.floor(Math.random() * (2004 - 0) + 0);
+	return Math.floor(Math.random() * (2014 - 0) + 0);
 }
 
 function randWordAlex() {
